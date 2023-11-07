@@ -1,0 +1,35 @@
+/* Color Theme Swatches in Hex 
+#07E0BD
+#0777E0
+#06BDE0
+#07E074
+#0733E0
+*/
+
+
+/* ---------------Box Sizing----------------- */
+
+html {
+    box-sizing: border-box;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+/* ---------------Global Styles----------------- */
+
+
+body{
+  font-family: 'Ubuntu', sans-serif;
+  background-image:url(/css-demo/assets/imgs/wata.jpg);
+}
+
+main{
+  background-color: #ffffff99;
+  width: 80vw;
+  margin: 40px auto 40px auto;
+  border: 2px solid #0777E0;
+  border-radius: 15px;
+}
