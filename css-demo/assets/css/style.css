@@ -18,12 +18,20 @@ html {
     box-sizing: inherit;
   }
 
+
+/* ---------------Utility Classes----------------- */
+
+.container{
+  margin: auto;
+  padding: 40px;
+}
+
 /* ---------------Global Styles----------------- */
 
 
 body{
   font-family: 'Ubuntu', sans-serif;
-  background-image:url(/css-demo/assets/imgs/wata.jpg);
+  background-color: #06BDE0;
 }
 
 main{
@@ -32,4 +40,75 @@ main{
   margin: 40px auto 40px auto;
   border: 2px solid #0777E0;
   border-radius: 15px;
+}
+
+header.primary{
+  background-color:#0777E0;
+  background-image: url(/css-demo/assets/imgs/waterboat.jpg);
+  /* Local Path
+    background-image: url("../img/bg_1.png")
+  */  
+  background-size:cover;
+  background-repeat:no-repeat;
+  padding:20px;
+  color: #ffffff99;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  border-bottom: 4px solid #0733E0;
+  border-radius: 15px;
+}
+
+header.primary .hgroup{
+  width: 70%;
+}
+
+.hgroup h1, .hgroup h2{
+  margin: 0;
+}
+
+header.primary .hgroup h1 a{
+  color: #ffffff99;
+  text-decoration: none;
+  text-shadow: .6px .6px #000;
+  font-size: 2.5rem;
+}
+
+header.primary .hgroup h2{
+  color: #ffffff99;
+  text-shadow: .6px .6px #000;
+  font-size: 1.2rem;
+}
+
+header.primary nav{
+  width: 30%;
+  margin: 0;
+}
+
+header.primary nav ul{
+  list-style-type: none;
+  margin: 0;
+}
+
+header.primary nav ul li{
+  margin-bottom: 5px;
+}
+
+header.primary nav a{
+  color: #ffffff99;
+  text-decoration: none;
+  background-color: rgba(7, 51, 224, 88);
+  display: block;
+  padding: 10px;
+  border-radius: 0px 20px;
+  border: 2px solid #0777E0;
+  border-right: 10px solid #0777E0;
+  text-align: right;
+}
+
+#content h2, #content h3{
+  color:#07E074;
+  border-left: 8px solid #0733E0;
+  border-radius: 15px 0;
+  padding: 3.5px;
 }
