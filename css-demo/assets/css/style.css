@@ -26,6 +26,12 @@ html {
   padding: 40px;
 }
 
+/* ---------------Responsive Images----------------- */
+img{
+  max-width: 100%;
+  height: auto;
+}
+
 /* ---------------Global Styles----------------- */
 
 
@@ -106,9 +112,73 @@ header.primary nav a{
   text-align: right;
 }
 
-#content h2, #content h3{
+#content h2, #content h3, .widget h2{
   color:#07E074;
   border-left: 8px solid #0733E0;
   border-radius: 15px 0;
   padding: 3.5px;
+}
+
+#blog {
+  background-color: #0733E0;
+  background: linear-gradient();
+  padding: 30px 0;
+  border-top: 10px double #06BDE0;
+}
+
+#blog > h2{
+  color: #ffffff99;
+  text-shadow: .6px .6px #000;
+  font-size: 2.2rem;
+  margin-left: 20px;
+}
+
+article.post{
+  background-color: #ffffff99;
+  margin: 20px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas: 
+  "figure header"
+  "figure post-content"
+  "figure footer";
+  grid-gap:20px;
+}
+
+article.post figure{
+  grid-area:figure;
+  margin: 0;
+}
+
+article.post header{
+  grid-area:header;
+}
+
+article.post .post-content{
+  grid-area:post-content;
+
+}
+
+article.post .post-meta{
+  grid-area:footer;
+}
+
+aside .container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+aside .widget:first-of-type{
+  border-right: 4px solid #ffffff99;
+  padding: 5px;
+}
+
+#colophon{
+  text-align: center;
+  background-color:#0777E0;
+  background-image: url(/css-demo/assets/imgs/waterboat.jpg);
+  padding: 30px;
+  color: #ffffff99;
 }
