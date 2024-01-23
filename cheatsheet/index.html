@@ -1,115 +1,116 @@
 <!doctype html>
-
 <html lang="en">
+<!-- This is a comment -->
 
 <head>
-  <title>My First HTML Document</title>
-  <!-- The head section contains metadata and linked resoures-->
-  <meta charset="utf-8" />
-  <meta name="description" content="This is a website for learning and commiting HTML, CSS, and JavaScript in a code sandbox enviornment." />
-  <meta name="author" content="William Revis" />
-  <meta name="keywords" content="UALR, UA Little Rock, IT Minor" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/prism.min.js"></script>
+  <title>William Revis</title>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/prism.min.js"></script>
+  <meta name="description" content="Keyword rich description of the site's purpose">
+  <meta name="author" content="William Revis">
 </head>
 
-<body class="test">
+<body>
   <header>
-  <h1>HTML 5 Reference Document</h1>
-</header>
-  <section id="forms">
-    <h2 class="section-heading">Forms</h2>
-    <form action="processing-script.php" method="get">
-      <fieldset>
-        <legend>Sample Form Fields</legend>
-        <label>Full Name: <input type="text" id="full-name" name="full-name" placeholder="Name here.." /></label>
-        <label for="address">Address:</label>
-        <textarea id="address" name"address"></textarea>
-        <label for="cmf">Favorite Car Manufacturer</label>
-        <select id="cmf" name="cmf">
-          <option selected value="null"> </option>
-          <option value="F">Ford</option>
-          <option value="D">Dodge</option>
-          <option value="H">Honda</option>
-          <option value="B">Bentley</option>
-        </select>
-        <input type="submit" value="Sumbit your response to the Train Station" />
-      </fieldset>
-    </form>
-  </section>
+    <h1>HTML5 Reference Document</h1>
+  </header>
+
   <section id="headings">
-    <h2 class="section-heading">Heading</h2>
-    <h1>Heading 1</h1>
-    <h2>Heading 2</h2>
-    <h3>Heading 3</h3>
-    <h4>Heading 4</h4>
-    <h5>Heading 5</h5>
-    <h6>Heading 6</h6>
+    <h2 class="section-heading">Headings</h2>
+    <div class="output">
+      <h1>Heading 1</h1>
+      <h2>Heading 2</h2>
+      <h3>Heading 3</h3>
+      <h4>Heading 4</h4>
+      <h5>Heading 5</h5>
+      <h6>Heading 6</h6>
+    </div>
+    <div class="markup">
+      <pre>
+    <code class="language-markup">
+ <script type="text/plain" class="language-markup">
+      <h1>Heading 1</h1>
+      <h2>Heading 2</h2>
+      <h3>Heading 3</h3>
+      <h4>Heading 4</h4>
+      <h5>Heading 5</h5>
+      <h6>Heading 6</h6>
+   </script>
+    </code>
+</pre>
+    </div>
   </section>
-  <section id="text-based-semantics">
-    <h2 class="section-heading">Text Based Semantics</h2>
-    <p>Lorem ipsum dolor sit <em>amet consectetur adipisicing</em> elit. Dignissimos voluptate amet dolorem. <strong>Necessitatibus</strong>, consectetur neque. <del>Id odit fuga</del>, consequuntur alias rerum ratione! Officiis suscipit <sub>subscript</sub> dignissimos alias facere explicabo corporis! Tempora!<sup>superscript</sup></p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, accusamus minima. Iure cum libero deleniti magni quod aliquid in! Neque consequatur
-      <hr />maxime suscipit repudiandae unde minus ad enim architecto repellat!
-    </p>
-    <address>
-      William Revis<br />
-      555 Easy St.<br />
-      Little Rock, AR, 72204
-    </address>
+  <section id="images">
+    <h2 class="section-heading">Images</h2>
+    <div class="output">
+      <img src="https://thomaswallace.net/wp-content/uploads/2018/02/ualr.png" alt="UALR Logo">
+    </div>
+    <div class="markup">
+      <pre>
+    <code class="language-markup">
+ <script type="text/plain" class="language-markup">
+       <img src="https://thomaswallace.net/wp-content/
+       uploads/2018/02/ualr.png" alt="UALR Logo">
+   </script>
+    </code>
+</pre>
+    </div>
   </section>
-  <section id="table">
-    <h2 class="section-heading"> Table </h2>
-    <!-- Remove Broder Attribute before publishing to web -->
-    <table border="1">
-      <caption>Concession Stand</caption>
-      <tr>
-        <th scope="col">Item</th>
-        <th scope="col">Quanity</th>
-        <th scope="col">Cost</th>
-      </tr>
-      <tr>
-        <td>Soda</td>
-        <td>22</td>
-        <td>$2.40</td>
-      </tr>
-      <tr>
-        <td>Candy</td>
-        <td>56</td>
-        <td>$1.22</td>
-      </tr>
-      <tr>
-        <td>Sandwhiches</td>
-        <td>15</td>
-        <td>$4.50</td>
-      </tr>
-      <tr>
-        <td>Bread</td>
-        <td>5</td>
-        <td>$.99</td>
-      </tr>
-    </table>
-  </section>
-  <section id="list">
-    <h2 class="section-heading">Lists</h2>
-    <h3>Unordered List</h3>
+  <section id="lists">
+    <h2 class="section-heading">Types of Lists</h2>
+    <h3 class="section-heading">Unordered List</h3>
+    <div class="output">
+      <ul>
+        <li>List Item</li>
+        <li>List Item</li>
+        <li>List Item</li>
+        <li>List Item</li>
+      </ul>
+    </div>
+    <div class="markup">
+      <pre>
+    <code class="language-markup">
+ <script type="text/plain" class="language-markup">
     <ul>
       <li>List Item</li>
       <li>List Item</li>
       <li>List Item</li>
       <li>List Item</li>
-      <li>List Item</li>
     </ul>
-    <h3>Ordered List</h3>
-    <ol reversed>
-      <li>List Item</li>
+   </script>
+    </code>
+</pre>
+    </div>
+    <h3 class="section-heading">Ordered List</h3>
+    <div class="output">
+           <ol>
       <li>List Item</li>
       <li>List Item</li>
       <li>List Item</li>
       <li>List Item</li>
     </ol>
-    <h3>Definition List</h3>
-    <dl>
+    </div>
+    <div class="markup">
+    <pre>
+    <code class="language-markup">
+       <script type="text/plain" class="language-markup">
+    <ol>
+      <li>List Item</li>
+      <li>List Item</li>
+      <li>List Item</li>
+      <li>List Item</li>
+    </ol>
+       </script>
+    </code>
+    </pre>
+    </div>
+    <h3 class="section-heading">Definition List</h3>
+    <div class="output">
+     <dl>
       <dt>Definition Term</dt>
       <dd>Definition Description</dd>
       <dd>Definition Description</dd>
@@ -117,60 +118,295 @@
       <dt>Definition Term</dt>
       <dd>Definition Description</dd>
       <dd>Definition Description</dd>
+      <dt>Definition Term</dt>
       <dd>Definition Description</dd>
     </dl>
-    <h3>Nested List</h3>
-    <ul>
-      <li>List Item</li>
-      <li>List Item</li>
-      <li>List Item
-        <ol start="3">
-          <li>List Item</li>
-          <li>List Item</li>
-          <li>List Item</li>
-          <li>List Item</li>
-          <li>List Item</li>
-        </ol>
-      </li>
-      <li>List Item</li>
-      <li>List Item</li>
-    </ul>
+    </div>
+    <div class="markup">
+    <pre>
+    <code class="language-markup">
+       <script type="text/plain" class="language-markup">
+     <dl>
+      <dt>Definition Term</dt>
+      <dd>Definition Description</dd>
+      <dd>Definition Description</dd>
+      <dd>Definition Description</dd>
+      <dt>Definition Term</dt>
+      <dd>Definition Description</dd>
+      <dd>Definition Description</dd>
+      <dt>Definition Term</dt>
+      <dd>Definition Description</dd>
+    </dl>
+       </script>
+    </code>
+    </pre>
+    </div>
   </section>
   <section id="hyperlinks">
     <h2 class="section-heading">Hyperlinks</h2>
-    <ul>
-      <li><a href="https://ualr.edu#news" target="_blank">Absolute Link</a></li>
-      <li><a href="folder/folder/file.html" title="Relative Link Example">Relative Link</a></li>
-      <li><a href="#headings">Anchor Link</a></li>
+    <div class="output">
+<ul>
+      <li><a href="https://ualr.edu" target="_blank" title="This is a verbose description of absolute link">Absolute Link</a></li>
+      <li><a href="resources/pages/about.html" target="_blank">Relative Link</a></li>
+      <li><a href="#top">Anchor Links</a></li>
       <li><a href="mailto:email@address.com">Email Link</a></li>
     </ul>
+    </div>
+    <div class="markup">
+      <pre>
+    <code class="language-markup">
+ <script type="text/plain" class="language-markup">
+    <ul>
+      <li><a href="https://ualr.edu" target="_blank" 
+      title="This is a verbose description of absolute 
+      link">Absolute Link</a></li>
+      <li><a href="resources/pages/about.html" 
+      target="_blank">Relative Link</a></li>
+      <li><a href="#top">Anchor Links</a></li>
+      <li><a href="mailto:email@address.com">
+      Email Link</a></li>
+    </ul>
+   </script>
+    </code>
+    </pre>
+    </div>
+  </section>
+  <section id="text-based-semantics">
+    <h2 class="section-heading">Text Based Sematics</h2>
+    <div class="output">
+        <p>
+      <em>Lorem Ipsum</em> is simply dummy text of the <strong>printing and typesetting industry</strong>. Lorem Ipsum has been the industry's standard <del>dummy text</del> ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of <sub>Lorem</sub><sup>Ipsum</sup>.
+    </p>
+    <address>
+      501 North Filmore<br />Little Rock, AR, 72205
+    </address>
+    </div>
+    <div class="markup">
+    <pre>
+    <code class="language-markup">
+       <script type="text/plain" class="language-markup">
+<p><em>Lorem Ipsum</em> is simply dummy text of the <strong>printing and
+typesetting industry</strong>. Lorem Ipsum has been the industry's 
+standard <del>dummy text</del> ever since the 1500s, when an unknown
+printer took a galley of type and scrambled it to make a type
+specimen book.It has survived not only five centuries, but 
+also the leap into electronic typesetting, remaining essentially
+unchanged.It was popularised in the 1960s with the release of
+Letraset sheets containing Lorem Ipsum passages, and more
+recently with desktop publishing software like Aldus 
+PageMaker including versions of <sub>Lorem</sub><sup>Ipsum</sup>.
+    </p>
+    <address>
+      501 North Filmore<br />Little Rock, AR, 72205
+    </address>
+       </script>
+    </code>
+    </pre>
+    </div>
+  </section>
+  <section id="tables">
+    <h2 class="section-heading">Tables</h2>
+    <div class="output">
+          <table border="1">
+      <caption>Groceries</caption>
+      <tr>
+        <th scope="col">Item</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Cost</th>
+      </tr>
+      <tr>
+        <td>Cheetos</td>
+        <td>12</td>
+        <td>.99</td>
+      </tr>
+      <tr>
+        <td>Cheetos</td>
+        <td>12</td>
+        <td>.99</td>
+      </tr>
+      <tr>
+        <td>Cheetos</td>
+        <td>12</td>
+        <td>.99</td>
+      </tr>
+    </table>
+    </div>
+    <div class="markup">
+    <pre>
+    <code class="language-markup">
+       <script type="text/plain" class="language-markup">
+      <table border="1">
+      <caption>Groceries</caption>
+      <tr>
+        <th scope="col">Item</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Cost</th>
+      </tr>
+      <tr>
+        <td>Cheetos</td>
+        <td>12</td>
+        <td>.99</td>
+      </tr>
+      <tr>
+        <td>Cheetos</td>
+        <td>12</td>
+        <td>.99</td>
+      </tr>
+      <tr>
+        <td>Cheetos</td>
+        <td>12</td>
+        <td>.99</td>
+      </tr>
+    </table>
+       </script>
+    </code>
+    </pre>
+    </div>
   </section>
   <section id="quotes">
     <h2 class="section-heading">Quotes</h2>
-    <h3>Blockquote</h3>
-    <blockquote>Once there was a way to get back homeward, once there was a way to get back home. <cite>The Beatles</cite></blockquote>
-    <h3>Inline Quote</h3>
+    <h3 class="section-heading">Blockquote</h3>
+    <div class="output">
+      <blockquote>Once there was a way to get back homeward, once there was a way to get back home. <cite>The Beatles</cite></blockquote>
+    </blockquote>
+    </div>
+    <div class="markup">
+    <pre>
+    <code class="language-markup">
+       <script type="text/plain" class="language-markup">
+        <blockquote>Once there was a way to get back homeward, once there was a way to get back home. <cite>The Beatles</cite></blockquote>
+       </script>
+    </code>
+    </pre>
+    </div>
+    <h3 class="section-heading">Inline Quote</h3>
+    <div class="output">
     <p><q>Here comes the sun!</q> said The Beatles. </p>
+    </div>
+    <div class="markup">
+    <pre>
+    <code class="language-markup">
+       <script type="text/plain" class="language-markup">
+       <p><q>Honey tastes good</q> said Pooh.</p>
+       </script>
+    </code>
+    </pre>
+    </div>
   </section>
-  <section id="images">
-    <h2 class="section-heading">Images</h2>
-    <img src="https://thomaswallace.net/wp-content/uploads/2018/02/ualr.png
-" alt="UA Little Rock Logo" />
-  </section>
-  <section id="structural-elements">
-    <h2 class="section-heading">Structural Elements</h2>
-    <code>&lt;main&gt;</code>
-    <code>&lt;div&gt;</code>
-    <code>&lt;span&gt;</code>
-    <code>&lt;section&gt;</code>
-    <code>&lt;nav&gt;</code>
-    <code>&lt;article&gt;</code>
-    <code>&lt;aside&gt;</code>
-    <code>&lt;header&gt;</code>
-    <code>&lt;footer&gt;</code>
-    <code>&lt;figure&gt;</code>
-    <code>&lt;figcaption&gt;</code>
-  </section>
-</body>
+  <section id="forms">
+    <h2 class="section-heading">Forms</h2>
+        <div class="output">
+        <form action="processing-script.php" method="get">
+      <fieldset>
+        <legend>Sample Form Fields</legend>
+        <label for="first-name">First Name</label>
+        <input type="input" id="first-name" name="first-name" required>
+        <label for="comments">Comments</label>
+        <textarea id="comments" name="comments"></textarea>
+        <label for="fav-car">Favorite Car Maker</label>
+        <select id="fav-car" name="fav-car">
+          <option value="F">Ford</option>
+          <option value="C">Chevy</option>
+          <option value="D">Dodge</option>
+          <option value="null" selected>---</option>
+        </select>
+        <input type="submit" value="Send">
+        <fieldset>
+          <legend>Select a maintenance drone:</legend>
 
+          <div>
+            <input type="radio" id="huey" name="drone" value="huey" checked>
+            <label for="huey">Huey</label>
+          </div>
+
+          <div>
+            <input type="radio" id="dewey" name="drone" value="dewey">
+            <label for="dewey">Dewey</label>
+          </div>
+
+          <div>
+            <input type="radio" id="louie" name="drone" value="louie">
+            <label for="louie">Louie</label>
+          </div>
+        </fieldset>
+
+      </fieldset>
+    </form>
+    </div>
+    <div class="markup">
+    <pre>
+    <code class="language-markup">
+       <script type="text/plain" class="language-markup">
+        <form action="processing-script.php" method="get">
+      <fieldset>
+        <legend>Sample Form Fields</legend>
+        <label for="first-name">First Name</label>
+        <input type="input" id="first-name" name="first-name" required>
+        <label for="comments">Comments</label>
+        <textarea id="comments" name="comments"></textarea>
+        <label for="fav-car">Favorite Car Maker</label>
+        <select id="fav-car" name="fav-car">
+          <option value="F">Ford</option>
+          <option value="C">Chevy</option>
+          <option value="D">Dodge</option>
+          <option value="null" selected>---</option>
+        </select>
+        <input type="submit" value="Send">
+        <fieldset>
+          <legend>Select a maintenance drone:</legend>
+          <div>
+            <input type="radio" id="huey" name="drone" value="huey" checked>
+            <label for="huey">Huey</label>
+          </div>
+          <div>
+            <input type="radio" id="dewey" name="drone" value="dewey">
+            <label for="dewey">Dewey</label>
+          </div>
+          <div>
+            <input type="radio" id="louie" name="drone" value="louie">
+            <label for="louie">Louie</label>
+          </div>
+        </fieldset>
+
+      </fieldset>
+    </form>
+       </script>
+    </code>
+    </pre>
+    </div>
+   
+  </section>
+      <section id="structural-elements">
+      <h2 class="section-heading">Structural Elements</h2>
+      <div class="output">
+      <code>&lt;main&gt;</code><br>
+      <code>&lt;header&gt;</code><br>
+      <code>&lt;footer&gt;</code><br>
+      <code>&lt;nav&gt;</code><br>
+      <code>&lt;section&gt;</code><br>
+      <code>&lt;article&gt;</code><br>
+      <code>&lt;aside&gt;</code><br>
+      <code>&lt;figure&gt;</code><br>
+      <code>&lt;figcaption&gt;</code>
+    </div>
+    <div class="markup">
+    <pre>
+    <code class="language-markup">
+       <script type="text/plain" class="language-markup">
+  <main>
+  <header>
+  <footer>
+  <nav>
+  <section>
+  <article>
+  <aside>
+  <figure>
+  <figcaption>
+       </script>
+    </code>
+    </pre>
+    </div>
+    </section>
+  <footer>&copy; 2023 William Revis</footer>
+</body>
 </html>
