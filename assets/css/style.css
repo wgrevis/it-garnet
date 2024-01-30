@@ -32,3 +32,9 @@ body{
 a:link , a:visited {
     color: antiquewhite;
 }
+
+
+li {
+    list-style-type: none;
+    background-image: url(/assets/img/darkcloud.png);
+}
