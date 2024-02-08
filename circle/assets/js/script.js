@@ -3,9 +3,6 @@ $("CirlceForm").validate({
 
 });
 
-
-//Prompt for Raduis Value
-
 function displayResults() {
     // if the form is valid, then make the calculations
     if ($("#CircleForm").valid()) {
@@ -23,12 +20,12 @@ function displayResults() {
          radius = document.getElementById("radius").value;
 
          // Convert numbers from strings to Floating Point
-         radius = parseFloat( radius ); 
+         radius = parseFloat(radius); 
 
          // calculate the area, radius, circumference
-         area = calcArea(radius);
-         circumference = calcCircumference(radius);
          diameter = calcDiameter(radius);
+         circumference = calcCircumference(radius);
+         area = calcArea(radius);
 
          // display the results
          document.getElementById("diameter").innerHTML = diameter.toString();
@@ -49,7 +46,7 @@ function calcCircumference(radius) {
 }
 
 function calcArea(radius) {
-    return Math.PI * (radius*2)
+    return Math.PI * (radius * radius)
 }
 
 
@@ -62,5 +59,6 @@ function clear() {
     document.getElementById("diameter").innerHTML = "";
     document.getElementById("circumference").innerHTML = "";
 }
+
 
 
