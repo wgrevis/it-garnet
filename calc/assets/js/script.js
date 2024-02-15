@@ -16,14 +16,28 @@ function calculate() {
         if (document.getElementById("AddSign").checked) {
             operator = document.getElementById("AddSign").value;
         }
-        if (document.getElementById("AddSign").checked) {
-            operator = document.getElementById("AddSign").value;
+        if (document.getElementById("SubtractSign").checked) {
+            operator = document.getElementById("SubtractSign").value;
         }
-        if (document.getElementById("AddSign").checked) {
-            operator = document.getElementById("AddSign").value;
+        if (document.getElementById("MultiSign").checked) {
+            operator = document.getElementById("MultiSign").value;
         }
-        if (document.getElementById("AddSign").checked) {
-            operator = document.getElementById("AddSign").value;
+        if (document.getElementById("DivideSign").checked) {
+            operator = document.getElementById("DivideSign").value;
+        }
+        
+        /* Calculations */
+        if (operator == "Add") {
+            result = (operand1fp + operand2fp)
+        }
+        if (operator == "Sub") {
+            result = (operand1fp - operand2fp)
+        }
+        if (operator == "Multi") {
+            result = (operand1fp * operand2fp)
+        }
+        if (operator == "Divide") {
+            result = (operand1fp / operand2fp)
         }
 
         
