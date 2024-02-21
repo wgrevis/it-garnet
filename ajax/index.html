@@ -12,87 +12,87 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/additional-methods.min.js"></script>
 </head>
 <body>
-<form id="Ajax">
+<form id="AJAXForm">
     <div class="formcontainer" onsubmit="return false">
         <h1>Unit Converter (AJAX)</h1>
         <fieldset id="detail">
             <legend>Unit Converter (AJAX)</legend>  
             <br>
             
-            <label class="formlabel" for="fromvalue">From Value: </label>
-            <input type="text" id="fromvalue" name="fromvalue" size="15" maxlength="15"       
-                   data-rule-required="true"  data-msg-required="Operand 1 is Required" 
-                   data-rule-number="true" data-msg-number="Operand 1 must be a Number">
-            <label class="error" for="fromvalue" id="Operand1Error"></label>
+            <label class="FromValue" for="FromValue">From Value: </label>
+            <input type="text" id="FromValue" name="FromValue" size="15" maxlength="15"       
+                   data-rule-required="true"  data-msg-required="From Value is Required!" 
+                   data-rule-number="true" data-msg-number="From Value must be a number!">
+            <label class="error" for="FromValue" id="FromValue"></label>
             <br><br>
 
       
-            <label class="formlabel">From Unit: </label>
-                <label for="fromcentimeters">
-                    <input type="radio" name="Operator" id="fromcentimeter" value="fromcentimeter"
+            <label class="FromUnit">From Unit: </label>
+                <label for="fromcm">
+                    <input type="radio" name="FromUnit" id="fromcm" value="cm"
                            data-rule-required="true" data-msg-required="From Unit is Required" />centimeters
                 </label>
-                <label for="frommeters">
-                    <input type="radio" name="Operator" id="frommeter" value="frommeter"
+                <label for="frommeter">
+                    <input type="radio" name="FromUnit" id="frommeter" value="m"
                            data-rule-required="true" data-msg-required="From Unit is Required" />meters
                 </label>
-                <label for="fromkilometers">
-                    <input type="radio" name="Operator" id="fromkilo" value="Add"
+                <label for="fromkilometer">
+                    <input type="radio" name="FromUnit" id="fromkilometer" value="km"
                            data-rule-required="true" data-msg-required="From Unit is Required" />kilometers
                 </label>
-                <label for="frominches">
-                    <input type="radio" name="Operator" id="frominch" value="Add"
+                <label for="frominch">
+                    <input type="radio" name="FromUnit" id="frominch" value="in"
                            data-rule-required="true" data-msg-required="From Unit is Required" />inches
                 </label>
                 <label for="fromfeet">
-                    <input type="radio" name="Operator" id="fromfeet" value="Add"
+                    <input type="radio" name="FromUnit" id="fromfeet" value="ft"
                            data-rule-required="true" data-msg-required="From Unit is Required" />feet
                 </label>
-                <label for="fromyards">
-                    <input type="radio" name="Operator" id="fromyard" value="Add"
+                <label for="fromyard">
+                    <input type="radio" name="FromUnit" id="fromyard" value="yd"
                            data-rule-required="true" data-msg-required="From Unit is Required" />yards
                 </label>
-                <label for="frommiles">
-                    <input type="radio" name="Operator" id="frommile" value="Add"
+                <label for="frommile">
+                    <input type="radio" name="FromUnit" id="frommile" value="mi"
                            data-rule-required="true" data-msg-required="From Unit is Required" />miles
                 </label>
-            <label for="Operator" class="error" id="OpError"></label>
+            <label for="FromUnit" class="error" id="FromUnit"></label>
             <br><br>
 
-            <label class="formlabel">To Unit: </label>
-                <label for="tocentimeters">
-                    <input type="radio" name="Operator" id="tocentimeter" value="Add"
-                           data-rule-required="true" data-msg-required="From Unit is Required" />centimeters
+            <label class="ToUnit">To Unit: </label>
+                <label for="tocentimeter">
+                    <input type="radio" name="ToUnit" id="tocentimeter" value="cm"
+                           data-rule-required="true" data-msg-required="To Unit is Required" />centimeters
                 </label>
-                <label for="tometers">
-                    <input type="radio" name="Operator" id="tometer" value="Add"
-                           data-rule-required="true" data-msg-required="From Unit is Required" />meters
+                <label for="tometer">
+                    <input type="radio" name="ToUnit" id="tometer" value="m"
+                           data-rule-required="true" data-msg-required="To Unit is Required" />meters
                 </label>
-                <label for="tokilometers">
-                    <input type="radio" name="Operator" id="tokilo" value="Add"
-                           data-rule-required="true" data-msg-required="From Unit is Required" />kilometers
+                <label for="tokilometer">
+                    <input type="radio" name="ToUnit" id="tokilometer" value="km"
+                           data-rule-required="true" data-msg-required="To Unit is Required" />kilometers
                 </label>
-                <label for="toinches">
-                    <input type="radio" name="Operator" id="toinch" value="Add"
-                           data-rule-required="true" data-msg-required="From Unit is Required" />inches
+                <label for="toinch">
+                    <input type="radio" name="ToUnit" id="toinch" value="in"
+                           data-rule-required="true" data-msg-required="To Unit is Required" />inches
                 </label>
                 <label for="tofeet">
-                    <input type="radio" name="Operator" id="tofeet" value="Add"
-                           data-rule-required="true" data-msg-required="From Unit is Required" />feet
+                    <input type="radio" name="ToUnit" id="tofeet" value="ft"
+                           data-rule-required="true" data-msg-required="To Unit is Required" />feet
                 </label>
-                <label for="toyards">
-                    <input type="radio" name="Operator" id="toyard" value="Add"
-                           data-rule-required="true" data-msg-required="From Unit is Required" />yards
+                <label for="toyard">
+                    <input type="radio" name="ToUnit" id="toyard" value="yd"
+                           data-rule-required="true" data-msg-required="To Unit is Required" />yards
                 </label>
-                <label for="tomiles">
-                    <input type="radio" name="Operator" id="tomile" value="Add"
-                           data-rule-required="true" data-msg-required="From Unit is Required" />miles
+                <label for="tomile">
+                    <input type="radio" name="ToUnit" id="tomile" value="mi"
+                           data-rule-required="true" data-msg-required="To Unit is Required" />miles
                 </label>
-            <label for="Operator" class="error" id="OpError"></label>
+            <label for="ToUnit" class="error" id="ToUnit"></label>
             <br><br>
 
             <label class="formlabel">To Value: </label>
-            <span id="Result"></span>
+            <span id="ToValue"></span>
             <br><br>
 
             <input type="button" value="Calculate" name="Calculate" onclick="calculate();">
@@ -101,6 +101,7 @@
         </fieldset>
     </div>
 </form>
+
 <script src="assets/js/script.js"></script>
 </body>
 </html>

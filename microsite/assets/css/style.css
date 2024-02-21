@@ -1,4 +1,16 @@
-html {
-    box-sizing: border-box;
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Darumadrop One', cursive;
 }
 
+
+.homenav {
+    margin: 5px;
+    padding: 10px;
+    position: relative;
+    text-align: right;
+    list-style-type: none;
+    display: inline-block;
+    white-space: nowrap;
+}

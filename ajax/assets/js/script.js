@@ -1,66 +1,107 @@
 function calculate() {
-    
-    /* Make sure that the form is valid */
-    if ($( "#CalcForm" ).valid()) {
+    "use strict";
+
+
+    // get a reference to the form - Use the ID of the form
+    var form = $( "#AJAXForm" );
+
+    // If all of the form elements are valid, the get the form values
+    if (form.valid()) {
+
+          // From Value 
+        var FromValue = document.getElementById("FromValue").value;
         
-        /* get the operands from the form */
-        var operand1 = document.getElementById("Operand1").value;
-        var operand2 = document.getElementById("Operand2").value;
-        
-        /* convert the operands from string to floating point */
-        var operand1fp = parseFloat (operand1);
-        var operand2fp = parseFloat (operand2);
-        
-        /* figure out which operator was checked and place the value in operator */
-        var operator;
-        if (document.getElementById("AddSign").checked) {
-            operator = document.getElementById("AddSign").value;
+            // From Unit
+        var FromUnit;
+            if (document.getElementById("fromcm").checked) {
+            FromUnit = document.getElementById("fromcm").value;
         }
-        if (document.getElementById("SubtractSign").checked) {
-            operator = document.getElementById("SubtractSign").value;
+            if (document.getElementById("frommeter").checked) {
+            FromUnit = document.getElementById("frommeter").value;
         }
-        if (document.getElementById("MultiSign").checked) {
-            operator = document.getElementById("MultiSign").value;
+            if (document.getElementById("fromkilometer").checked) {
+            FromUnit = document.getElementById("fromkilometer").value;
         }
-        if (document.getElementById("DivideSign").checked) {
-            operator = document.getElementById("DivideSign").value;
+            if (document.getElementById("frominch").checked) {
+            FromUnit = document.getElementById("frominch").value;
         }
-        
-        /* Calculations */
-        if (operator == "Add") {
-            result = (operand1fp + operand2fp)
+            if (document.getElementById("fromfeet").checked) {
+            FromUnit = document.getElementById("fromfeet").value;
         }
-        if (operator == "Sub") {
-            result = (operand1fp - operand2fp)
+            if (document.getElementById("fromyard").checked) {
+            FromUnit = document.getElementById("fromyard").value;
         }
-        if (operator == "Multi") {
-            result = (operand1fp * operand2fp)
-        }
-        if (operator == "Divide") {
-            result = (operand1fp / operand2fp)
+            if (document.getElementById("frommile").checked) {
+            FromUnit = document.getElementById("frommile").value;
         }
 
-        
-        document.getElementById("Result").innerHTML = result.toString();
+         // To Unit  
+        var ToUnit;
+            if (document.getElementById("tocentimeter").checked) {
+                ToUnit = document.getElementById("tocentimeter").value;
+            }
+            if (document.getElementById("tometer").checked) {
+                ToUnit = document.getElementById("tometer").value;
+            }
+            if (document.getElementById("tokilometer").checked) {
+                ToUnit = document.getElementById("tokilometer").value;
+            }
+            if (document.getElementById("toinch").checked) {
+                ToUnit = document.getElementById("toinch").value;
+            }
+            if (document.getElementById("tofeet").checked) {
+                ToUnit = document.getElementById("tofeet").value;
+            }
+            if (document.getElementById("toyard").checked) {
+                ToUnit = document.getElementById("toyard").value;
+            }
+            if (document.getElementById("tomile").checked) {
+                ToUnit = document.getElementById("tomile").value;
+            }
+
+        CalculateResult(FromValue, FromUnit, ToUnit);
     }
 }
 
+        /* Calculations */
+
+async function CalculateResult(FromValue, FromUnit, ToUnit) {
+    var myURL = "https://brucebauer.info/assets/ITEC3650/unitsconversion.php";
+
+    myURL = myURL + "?FromValue=" + encodeURIComponent(FromValue) + "&FromUnit=" + encodeURIComponent(FromUnit) + "&ToUnit=" + encodeURIComponent(ToUnit);
+
+    let myCalcObject = await fetch(myURL);
+    let myResult = await myCalcObject.text();
+
+    document.getElementById("ToValue").innerHTML = myResult;
+}
+
+
+    /* Clear Form */
+
 function clearform() {
+    "use strict";
     
     /* Set all of the form values to blank or false */
-    document.getElementById("Operand1").value = "";
-    document.getElementById("Operand2").value = "";
-    document.getElementById("Operand1Error").innerHTML = "";
-    document.getElementById("Operand2Error").innerHTML = "";
-    document.getElementById("AddSign").checked = false;
-    document.getElementById("SubtractSign").checked = false;
-    document.getElementById("MultiSign").checked = false;
-    document.getElementById("DivideSign").innerHTML = "";
-    document.getElementById("OpError").innerHTML = "";
-    document.getElementById("Result").innerHTML = "";
+    document.getElementById("FromValue").value = "";
+    document.getElementById("ToValue").innerHTML = "";
+    document.getElementById("fromcm").checked = false;
+    document.getElementById("frommeter").checked = false;
+    document.getElementById("fromkilometer").checked = false;
+    document.getElementById("frominch").checked = false;
+    document.getElementById("fromfeet").checked = false;
+    document.getElementById("fromyard").checked = false;
+    document.getElementById("frommile").checked = false;
+    document.getElementById("tocentimeter").checked = false;
+    document.getElementById("tometer").checked = false;
+    document.getElementById("tokilometer").checked = false;
+    document.getElementById("toinch").checked = false;
+    document.getElementById("tofeet").checked = false;
+    document.getElementById("toyard").checked = false;
+    document.getElementById("tomile").checked = false;
 }
 
 /* Form Validation */
-$( "#CalcForm" ).validate({
+$( "#AJAXFrom" ).validate({
  
 });
