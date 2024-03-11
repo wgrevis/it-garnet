@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta chartset="UTF-8" />
+    <meta name="description" content="Polygon Currenccy" />
+    <meta name="author" content="William Revis" />
+    <meta name="keywords" content="HTML, CSS, JavaScript, AJAX, jQuery" />
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <title>Currency Value</title>
+</head>
+<body>
+    <form id="CurrencyForm">
+    <div class="formcontainer">
+    <h2>Currency Value History</h2>
+    <label class="formlabel" >Base Currency:</label>
+    <select name="BaseCurrency" id="BaseCurrency" data-rule-required="true" data-msg-required="Base Currency is Required">
+        <option value="">Select a Currency...</option>
+        <option value="USD">US Dollar</option>
+        <option value="EUR">Euro Dollar</option>
+        <option value="INR">Indian Rupee</option>
+        <option value="PKR">Pakistan Rupee</option>
+        <option value="AED">UAE Dirham</option>
+    </select>
+    <br>
+    
+    <label class="formlabel" for="ToCurrency">Convert to Currency:</label>
+    <select id="ToCurrency" name ="ToCurrency" data-rule-required="true" data-msg-required="Convert to Currency is Required"> 
+        <option value="">Select a Currency...</option>
+        <option value="USD">US Dollar</option>
+        <option value="EUR">Euro Dollar</option>
+        <option value="INR">Indian Rupee</option>
+        <option value="PKR">Pakistan Rupee</option>
+        <option value="AED">UAE Dirham</option>
+    </select>
+
+    <br>
+    <label class="formlabel">From Date:</label>
+    <input type="date" name="FromDate" id="FromDate" data-rule-required="true" data-msg-required="From Date is Required"/>
+    <label id="FromDateError" for="FromDate" class="error"></label>
+    <br/>
+
+    <label class="formlabel">To Date:</label>
+    <input type="date" name="ToDate" id="ToDate" data-rule-required="true" data-msg-required="To Date is Required"/>
+    <label id="ToDateError" for="ToDate" class="error"></label>
+    <br>
+    
+    
+    <input type="button" value="ShowResults" id="ShowResults" name="ShowResults" onclick="Results();" />
+            <input
+              type="button"
+              value="Clear"
+              id="Clear"
+              name="Clear"
+              onclick="ClearForm();"
+            />
+            <hr />
+            <br />
+            
+            <div class="clearfix">
+              <div class="img-container">
+                <span id="StockValueTable"></span>
+              </div>
+              <div class="img-container">
+                <span id="StockVolumeTable"></span>
+              </div>
+            </div>
+            <hr />
+    
+            <div class="clearfix">
+    
+              <div class="img-container">
+                <canvas id="chartjs-0" width="400" height="400"></canvas>
+              </div>
+    
+              <div class="img-container">
+                <canvas id="chartjs-1" width="400" height="400"></canvas>
+              </div>
+              
+            </div>
+          </div>
+        </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script src="assets/script/script.js"></script>
+</body>
+</html>
