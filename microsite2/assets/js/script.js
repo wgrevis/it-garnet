@@ -1,2 +1,10 @@
-document.querySelector('video').defaultPlaybackRate = -1.0;
-document.querySelector('video').play()
+    $('#fade').slick({
+      dots: true,
+      infinite: true,
+      speed: 500,
+      fade: true,
+      slidesToShow: 1,
+      cssEase: 'linear',
+      autoplay: true,
+      autoplaySpeed: 2000
+    });
